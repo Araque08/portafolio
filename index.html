@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,97 +34,120 @@
         </div>
 
         <div class="header-content container">
-            <div class="header-txt">
+            <div class="header-txt" data-aos="fade-right">
                 <h1><span>Bienvenidos</span>I'm Sebastian Araque</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quia cumque asperiores, debitis
                     totam
                     explicabo impedit eaque. Tempore, enim nihil. Lorem ipsum dolor sit amet consectetur adipisicing
                     elit.
-                    Commodi, deleniti blanditiis cumque et quisquam recusandae veniam temporibus unde sapiente soluta
-                    quaerat voluptatem, eveniet placeat nam eum non dolore vero tenetur.</p>
+                    Commodie vero tenetur.</p>
                 <a href="#" class="btn-1">Contact-me</a>
                 <div class="social-media">
                     <ul>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="header-img">
-                <img src="https://cdn-icons-png.flaticon.com/512/1198/1198293.png" alt="Imagen del dueño de la pagina">
+            <div class="header-img" data-aos="fade-left">
+                <img src="img/imagen_ing.jpeg" alt="Imagen del dueño de la pagina">
             </div>
         </div>
 
     </header>
-    <section class="about-me">
-        <div class="about-me-content container">
-            <div class="about-me-description">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquid eius nisi dolores
-                nostrum a deleniti eos animi ducimus illo perferendis nemo repudiandae odit tempora consectetur sequi
-                doloribus, debitis error!</p>
-            </div>
-            <div class="about-me-skills">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium, cupiditate qui laboriosam
-                    vero accusantium fuga corporis alias quos laborum eligendi, magnam, assumenda tempore cumque ipsum
-                    distinctio repellat enim dignissimos.</p>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos eius, expedita perspiciatis adipisci fugiat.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, libero.</li>
-                </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, neque!</p>
-                <a href="">LinkedIn Profile</a>
+    <section class="about-me" data-aos="fade-up">
+        <div class="about-me container">
+            <h2>About me</h2>
+            <div class="about-me-content ">
+                <div class="about-me-description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquid eius nisi dolores
+                    nostrum a deleniti eos animi ducimus illo perferendis nemo repudiandae odit tempora consectetur sequi
+                    doloribus, debitis error!</p>
+                </div>
+                <div class="about-me-skills">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium, cupiditate qui laboriosam
+                        vero accusantium fuga corporis alias quos laborum eligendi, magnam, assumenda tempore cumque ipsum
+                        distinctio repellat enim dignissimos.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos eius, expedita perspiciatis adipisci fugiat.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, libero.</li>
+                    </ul>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, neque!</p>
+                    <a href="">LinkedIn Profile</a>
+                </div>
             </div>
         </div>
     </section>
-    <main class="recent-work">
+        <main class="recent-work" data-aos="fade-up">
         <div class="recent-work-content container">
-            <h2>Recent Work</h2>
-            <!-- Slider main container -->
+            <h2>Recent works</h2>
             <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="https://www.tres.pe/wp-content/uploads/2017/07/How-to-Get-the-Resources-You-Need-to-Execute-Inbound-Marketing--1024x678.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="https://www.escueladeinternet.com/wp-content/uploads/2022/05/ideas_disenoweb-800x400.png" alt=""></div>
-                    <div class="swiper-slide"><img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/e56e6d32-0869-4fbf-f71f-a75f9194e900/public" alt=""></div>
-                ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                    <!-- Tarjeta 1 -->
+                    <div class="swiper-slide work-card">
+                        <div class="work-img">
+                            <img src="https://www.tres.pe/wp-content/uploads/2017/07/How-to-Get-the-Resources-You-Need-to-Execute-Inbound-Marketing--1024x678.jpg" alt="Messenger">
+                            <div class="overlay">
+                                <a href="#">Visitar sitio</a>
+                            </div>
+                        </div>
+                        <p class="work-title">Messenger</p>
+                    </div>
 
-                <!-- If we need navigation buttons -->
+                    <!-- Tarjeta 2 -->
+                    <div class="swiper-slide work-card">
+                        <div class="work-img">
+                            <img src="https://www.escueladeinternet.com/wp-content/uploads/2022/05/ideas_disenoweb-800x400.png" alt="Tracker">
+                            <div class="overlay">
+                                <a href="#">Visitar sitio</a>
+                            </div>
+                        </div>
+                        <p class="work-title">Tracker</p>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="swiper-slide work-card">
+                        <div class="work-img">
+                            <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/e56e6d32-0869-4fbf-f71f-a75f9194e900/public" alt="Online shopping">
+                            <div class="overlay">
+                                <a href="#">Visitar sitio</a>
+                            </div>
+                        </div>
+                        <p class="work-title">Online shopping</p>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer-content container">
-            <div class="">
-                <h3>Lorem, ipsum dolor.</h3>
+            
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Desarrollamos experiencias digitales únicas, combinando diseño atractivo y funcionalidad.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
-            <div>
-                <h3>Lorem, ipsum.</h3>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="footer-social-media">
-                <h3>Social Media</h3>
+
+            <div class="footer-section footer-social-media">
+                <h3>Síguenos</h3>
                 <ul>
                     <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
@@ -132,32 +155,42 @@
                     <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Araque08. Todos los derechos reservados.</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+            slidesPerView: 3,      // Muestra 3 tarjetas
+            spaceBetween: 30,      // Espacio entre tarjetas
+            loop: true,            // Carrusel infinito
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
         });
     </script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+    </script>
 
+</body>
 </html>
