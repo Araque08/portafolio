@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -16,21 +17,45 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WJ928ZQZ');
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Descripción única -->
+    <meta name="description"
+        content="Portafolio profesional con proyectos web, habilidades en desarrollo front-end y back-end, experiencia en diseño digital y contacto directo." />
+
     <title>Portafolio</title>
-    <link rel="stylesheet" href="style2.css">
+
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- font-awesome para uso de iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper para slider de proyectos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- librería ligera de JavaScript + CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portafolio proyectos web" />
+    <meta property="og:description" content="Descubre mis proyectos de desarrollo web con HTML, JavaScript y Django." />
+    <meta property="og:url" content="https://araque08.com/" />
+    <meta property="og:image" content="https://tusitio.com/img/preview.jpg" /><!-- Arreglar -->
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Favicons -->
+
+    <!-- Preload crítico (fuentes/hero) -->
 </head>
 
 <body>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ928ZQZ" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header class="header">
+
+    <header class="header" id="header">
         <div class="menu">
             <a href="#"><img src="img/Logo.png" alt="Logo de la pagina" width="200px"></a>
             <input type="checkbox" id="menu-toggle">
@@ -39,78 +64,69 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li>Inicio</li>
+                    <li>Acerca</li>
                     <li>Blog</li>
-                    <li>Portfolio</li>
-                    <li>Pages</li>
+                    <li>Portafolio</li>
+                    <li>Proyectos</li>
                 </ul>
             </nav>
         </div>
 
         <div class="header-content container">
             <div class="header-txt" data-aos="fade-right">
-                <h1><span>Bienvenidos</span>I'm Sebastian Araque</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quia cumque asperiores, debitis
-                    totam
-                    explicabo impedit eaque. Tempore, enim nihil. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.
-                    Commodie vero tenetur.</p>
-                <a href="#" class="btn-1">Contact-me</a>
-                <div class="social-media">
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></i>Facebook</a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                    </ul>
-                </div>
+                <h1><span>Bienvenidos </span>Soy Sebastian Araque</h1>
+                <p>Este portafolio reúne mis proyectos de desarrollo web, donde aplico tecnologías como HTML,
+                JavaScript y Django, junto con analítica digital y buenas prácticas de diseño.</p>
+                    <a href="contactame.html" class="btn-1">Contactame</a>
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="https://github.com/Araque08"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                            <li><a href="https://www.facebook.com/sebastian.araque.751121"><i class="fa-brands fa-facebook"></i></i>Facebook</a></li>
+                            <li><a href="https://www.instagram.com/sse.bastiian/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        </ul>
+                    </div>
             </div>
             <div class="header-img" data-aos="fade-left">
-                <img src="img/imagen_ing.jpeg" alt="Imagen del dueño de la pagina">
+                <img src="img/imagen_ing.jpeg" alt="Imagen del ingeniero de software" loading="lazy" decoding="async">
             </div>
         </div>
 
     </header>
-    <section class="about-me" data-aos="fade-up">
+    <section class="about-me" id="about-me" data-aos="fade-up">
         <div class="about-me container">
-            <h2>About me</h2>
+            <h2>Acerca de mi</h2>
             <div class="about-me-content ">
                 <div class="about-me-description">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquid eius nisi
-                        dolores
-                        nostrum a deleniti eos animi ducimus illo perferendis nemo repudiandae odit tempora consectetur
-                        sequi
-                        doloribus, debitis error!</p>
+                    <p>Soy Sebastián Araque, desarrollador web enfocado en construir experiencias digitales modernas y funcionales. 
+                        Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas de diseño y desarrollo en cada proyecto.</p>
                 </div>
                 <div class="about-me-skills">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium, cupiditate qui
-                        laboriosam
-                        vero accusantium fuga corporis alias quos laborum eligendi, magnam, assumenda tempore cumque
-                        ipsum
-                        distinctio repellat enim dignissimos.</p>
+                    <p>Tengo experiencia en el desarrollo de aplicaciones web, desde el diseño de interfaces hasta la implementación 
+                        de funcionalidades con back-end. Estas son algunas de mis principales habilidades:</p>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad!</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos eius,
-                            expedita perspiciatis adipisci fugiat.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, libero.</li>
+                        <li>HTML5, CSS3 (Flexbox, Grid) y JavaScript ES6+</li>
+                        <li>Frameworks: Django (Python) y Node.js</li>
+                        <li>Control de versiones con Git y GitHub</li>
+                        <li>Analítica digital con Google Analytics y Tag Manager</li>
+                        <li>Diseño responsivo y buenas prácticas de UX/UI</li>
                     </ul>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, neque!</p>
-                    <a href="">LinkedIn Profile</a>
+                    <p>Siempre busco mejorar mis competencias y aportar valor en cada proyecto en el que participo.</p>
+                    <a href="https://www.linkedin.com/in/sebastian-felipe-araque-perez-62629b1ab/">Perfil LinkedIn</a>
                 </div>
             </div>
         </div>
     </section>
     <main class="recent-work" data-aos="fade-up">
         <div class="recent-work-content container">
-            <h2>Recent works</h2>
+            <h2>Trabajos Recientes</h2>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <!-- Tarjeta 1 -->
                     <div class="swiper-slide work-card">
                         <div class="work-img">
                             <img src="https://www.tres.pe/wp-content/uploads/2017/07/How-to-Get-the-Resources-You-Need-to-Execute-Inbound-Marketing--1024x678.jpg"
-                                alt="Messenger">
+                                alt="Proyecto web 1" loading="lazy" decoding="async">
                             <div class="overlay">
                                 <a href="#">Visitar sitio</a>
                             </div>
@@ -122,7 +138,7 @@
                     <div class="swiper-slide work-card">
                         <div class="work-img">
                             <img src="https://www.escueladeinternet.com/wp-content/uploads/2022/05/ideas_disenoweb-800x400.png"
-                                alt="Tracker">
+                                alt="Proyecto web 2" loading="lazy" decoding="async">
                             <div class="overlay">
                                 <a href="#">Visitar sitio</a>
                             </div>
@@ -134,7 +150,7 @@
                     <div class="swiper-slide work-card">
                         <div class="work-img">
                             <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/e56e6d32-0869-4fbf-f71f-a75f9194e900/public"
-                                alt="Online shopping">
+                                alt="Proyecto web 3" loading="lazy" decoding="async">
                             <div class="overlay">
                                 <a href="#">Visitar sitio</a>
                             </div>
@@ -162,20 +178,20 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="#header">Inicio</a></li>
+                    <li><a href="#about-me">Servicios</a></li>
+                    <li><a href="#recent-work">Portafolio</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-section footer-social-media">
-                <h3>Síguenos</h3>
+                <h3>Sígueme</h3>
                 <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/sebastian.araque.751121" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/sse.bastiian/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/Araque08" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/sebastian-felipe-araque-perez-62629b1ab/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
 
@@ -185,7 +201,7 @@
             <p>&copy; 2025 Araque08. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
@@ -207,6 +223,7 @@
             }
         });
     </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

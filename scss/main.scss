@@ -3,3 +3,584 @@
 @use './fyq';
 @use './open';
 @use './variables';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    overflow: hidden;
+    height: 80vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu input{
+    display: none;
+}
+
+.menu label{
+    display: none;
+}
+
+.navbar li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+    color: #facc15;
+}
+
+.header-content{
+    display: flex;
+    padding-top: 50px;
+}
+
+/* Texto animado en el header */
+.header-txt h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease forwards;
+}
+.header-txt{
+    width: 50%;
+}
+
+.header-txt span {
+    color: #facc15;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-1 {
+    display: inline-block;
+    background: #facc15;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-1:hover {
+    background: #fde047;
+    transform: scale(1.05);
+}
+
+.social-media{
+    width: 100%;
+    display: flex;
+}
+
+.social-media li{
+    display: inline-flex;
+    padding: 5px;
+    margin: 10px 5px;
+}
+
+.social-media li i{
+    margin-right: 3px;
+}
+
+/* Imagen principal */
+
+.header-img {
+    width: 40%;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #00ff99, #0066ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen dentro del contenedor */
+.header-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Efecto hover */
+.header-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 255, 153, 0.5);
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* About me */
+/* ===== ABOUT ME ===== */
+.about-me {
+    padding: 80px 20px;
+    background-color: #1e1f26; /* Fondo oscuro */
+    color: #fff;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #fde047; /* Línea decorativa verde */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-me-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-me-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fde047; /* Texto verde en la parte izquierda */
+}
+
+.about-me-description p {
+    margin-bottom: 15px;
+}
+
+.about-me-skills {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.about-me-skills ul {
+    list-style: none;
+    margin: 20px 30px;
+    padding: 0;
+}
+
+.about-me-skills ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+
+.about-me-skills ul li::before {
+    content: "●"; /* Icono de viñeta */
+    position: absolute;
+    left: 0;
+    color: #fde047;
+    font-size: 1.2rem;
+}
+
+.about-me-skills a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #fde047;
+    color: #fde047;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-me-skills a:hover {
+    background-color: #fde047;
+    color: #1e1f26;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-me-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Recent Work */
+/* ===== RECENT WORK ===== */
+
+/* Sección Recent Work */
+.recent-work {
+    padding: 80px 20px;
+    background-color: #1e1f26;
+    color: #fff;
+    text-align: center;
+    height: 60vh;
+}
+
+.recent-work h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #fde047;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Tarjeta de trabajo */
+.work-card {
+    text-align: center;
+}
+
+.work-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Imagen */
+.work-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+}
+
+.work-img:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay con fade */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 255, 153, 0.75); /* Verde translúcido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+/* Aparece suave al hover */
+.work-img:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Botón del overlay */
+.overlay a {
+    color: #000;
+    background: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Título debajo de la imagen */
+.work-title {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Swiper botones */
+.swiper-button-prev, 
+.swiper-button-next {
+    color: #fde047;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fde047;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #1e1f26;
+    color: #ccc;
+    padding: 50px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #fde047;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fde047;
+}
+
+/* Redes sociales */
+.footer-social-media ul {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-media ul li a {
+    color: #ccc;
+    font-size: 1.4rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social-media ul li a:hover {
+    color: #fde047;
+    transform: scale(1.2);
+}
+
+/* Parte inferior */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* ===================== */
+/*      RESPONSIVE        */
+/* ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    /* HEADER */
+    .header {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .menu {
+        padding: 0 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-txt{
+        width: 100%;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .header-img {
+        width: 200px;
+        height: 200px;
+        padding: 4px;
+    }
+
+    .header-txt h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-img img {
+        width: 250px;
+    }
+
+    /* ABOUT ME */
+    .about-me-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+
+
+    /* Contenedor del menú */
+    .menu {
+        justify-content: space-between;
+        padding: 10px 15px;
+        align-items: center;
+    }
+
+    /* Icono hamburguesa */
+    .menu label {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    /* Navbar horizontal en móviles */
+    .navbar {
+        display: flex;
+        flex-direction: row;  /* Horizontal */
+        gap: 15px;
+        background: #1e1f26;
+        padding: 8px 12px;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        border-radius: 8px;
+    }
+
+    /* Mostrar menú al hacer click */
+    #menu-toggle:checked + label + .navbar {
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 6px 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* HEADER */
+    .header-txt h1 {
+        font-size: 2rem;
+    }
+
+    .header-img {
+        width: 150px;
+        height: 150px;
+        padding: 3px;
+    }
+
+    .btn-1 {
+        margin-top: 15px;
+    }
+
+    /* ABOUT ME */
+    .about-me {
+        padding: 60px 15px;
+    }
+
+    .about-me h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-me-description {
+        font-size: 1rem;
+    }
+
+    /* RECENT WORK */
+    .recent-work {
+        padding: 60px 15px;
+        height: auto;
+    }
+
+    .recent-work h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    .work-img img {
+        height: 180px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social-media ul {
+        justify-content: center;
+    }
+}
+
+/* Extra pequeños (teléfonos muy pequeños) */
+@media (max-width: 480px) {
+    .header-txt h1 {
+        font-size: 1.6rem;
+    }
+
+    .header-img {
+        width: 120px;
+        height: 120px;
+        padding: 2px;
+    }
+
+    .header-img img {
+        width: 110%; /* Más zoom para que el rostro siga visible */
+        height: 110%;
+    }
+
+    .recent-work h2,
+    .about-me h2 {
+        font-size: 1.4rem;
+    }
+}
