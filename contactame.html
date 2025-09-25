@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es" referrerpolicy="no-referrer">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | Portafolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="contactame-body">
+    <main class="page" role="main">
+        <header class="header-contactame">
+            <div class="header-top">
+                <a href="index.html" class="back-link" aria-label="Volver al portafolio">← Portafolio</a>
+            </div>
+
+            <h1>Contáctame</h1>
+            <p><span class="badge">Seguro</span> Respondo normalmente en 24–48h.</p>
+        </header>
+
+        <form id="contactForm" novalidate autocomplete="on" aria-describedby="formErrors">
+            <!-- Honeypot anti-bots -->
+            <input type="text" name="empresa" id="empresa" tabindex="-1" autocomplete="off"
+                style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+
+            <div id="formErrors" class="errors" aria-live="polite"></div>
+
+            <div class="row two">
+                <div class="field">
+                    <label for="name">Nombre completo</label>
+                    <div class="control">
+                        <input id="name" name="name" type="text" placeholder="Tu nombre" minlength="2" maxlength="80"
+                            required autocomplete="name" inputmode="text" />
+                    </div>
+                    <small class="hint">Mínimo 2 caracteres.</small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <div class="control">
+                        <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required
+                            maxlength="120" autocomplete="email" />
+                    </div>
+                    <small class="hint">Usa un correo válido.</small>
+                </div>
+            </div>
+
+            <div class="row two">
+                <div class="field">
+                    <label for="phone">Teléfono (opcional)</label>
+                    <div class="control">
+                        <input id="phone" name="phone" type="tel" placeholder="+57 300 000 0000"
+                            pattern="^[+0-9\s\-()]{7,20}$" maxlength="20" autocomplete="tel" inputmode="tel" />
+                    </div>
+                    <small class="hint">Solo dígitos, +, -, () y espacios.</small>
+                </div>
+
+                <div class="field">
+                    <label for="subject">Asunto</label>
+                    <div class="control">
+                        <input id="subject" name="subject" type="text" placeholder="¿Cómo puedo ayudarte?" minlength="3"
+                            maxlength="120" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="message">Mensaje</label>
+                <div class="control">
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje…" minlength="10"
+                        maxlength="2000" required></textarea>
+                </div>
+                <small class="hint">Entre 10 y 2000 caracteres.</small>
+            </div>
+
+            <div class="checkbox">
+                <input id="terms" name="terms" type="checkbox" required />
+                <label for="terms">Acepto el tratamiento de datos personales y la <a href="#" rel="noopener">política de
+                        privacidad</a>.</label>
+            </div>
+
+            <div class="actions">
+                <button id="submitBtn" class="btn btn-primary" type="submit">Enviar mensaje</button>
+                <span class="hint">Tus datos se envían de forma segura. <span class="badge">Sin spam</span></span>
+            </div>
+        </form>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="assertive">Mensaje enviado ✅</div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

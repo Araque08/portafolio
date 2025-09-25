@@ -1,25 +1,47 @@
-// 🎨 Colores principales
-$color-primary: rgb(12, 126, 126);
-$color-secondary: rgb(0, 39, 45);
-$color-accent: rgb(191, 172, 139);
-$color-light: #f2f0eb;
-$color-dark: #000000;
+// Paleta adicional del comentario
+$bg-dark-blue: #0f172a;
+$text-white: #ffffff;
+$gradient-blue: linear-gradient(135deg, #1e3a8a, #3b82f6);
+$text-yellow: #facc15;
+$gradient-green-blue: linear-gradient(135deg, #00ff99, #0066ff);
 
-// Fondos
-$bg-form: rgb(19, 70, 71);
+// Sombras extra
+$shadow-strong: 0 4px 20px rgba(0, 0, 0, 0.3);
+$shadow-neon: 0 8px 30px rgba(0, 255, 153, 0.5);
 
-// 🌐 Tipografía
-$font-base: 'Segoe UI', sans-serif;
+// Colores neutros
+$text-light-gray: #ddd;
+$text-extra-light: #fff; // alias de $text-white
+$text-mid-gray: #ccc;
+$text-muted: #777;
+
+// Fondos translúcidos y bordes
+$bg-green-translucent: rgba(0, 255, 153, 0.75);
+$border-top-light: 1px solid rgba(255, 255, 255, 0.1);
+
+
+// Tipografía
+$font-base:'Poppins', sans-serif;
 $font-size-base: 16px;
 $font-size-title: 35px;
-$font-size-h1: 45px;
-$font-size-h2: 30px;
-$font-size-p: 25px;
+$font-size-h1:  2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.2rem;
+$font-size-p: 0.95rem;
 
-// 📐 Espaciados
+// Espaciados
 $padding-section: 40px;
 $margin-section: 20px;
 
-// 🔳 Sombras
-$shadow-base: 5px 5px 10px 2px rgba(0,0,0,0.5);
-$shadow-card: 0 10px 25px rgba(0, 0, 0, 0.2);
+// Tamaños Responsive
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+
+// Cantactme varaibles
+$radius: 16px;
+$radius-sm: 10px;
+$space: clamp(16px,2.5vw,28px);
+$space-sm: clamp(10px,1.5vw,16px);
+$space-lg: clamp(24px,3vw,36px);
