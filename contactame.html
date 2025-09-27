@@ -4,12 +4,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WJ928ZQZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <title>Contacto | Portafolio</title>
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body class="contactame-body">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ928ZQZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <main class="page" role="main">
         <header class="header-contactame">
             <div class="header-top">
@@ -20,7 +40,7 @@
             <p><span class="badge">Seguro</span> Respondo normalmente en 24–48h.</p>
         </header>
 
-        <form id="contactForm" novalidate autocomplete="on" aria-describedby="formErrors">
+        <form id="contactForm" action="procesar.php" novalidate autocomplete="on" aria-describedby="formErrors" method="POST">
             <!-- Honeypot anti-bots -->
             <input type="text" name="empresa" id="empresa" tabindex="-1" autocomplete="off"
                 style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
@@ -75,6 +95,9 @@
                 <small class="hint">Entre 10 y 2000 caracteres.</small>
             </div>
 
+            <!-- Aquí va el reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LcCb9UrAAAAANrRsOXiyjJPu8D1wcw7GnnJDVdV"></div>
+
             <div class="checkbox">
                 <input id="terms" name="terms" type="checkbox" required />
                 <label for="terms">Acepto el tratamiento de datos personales y la <a href="#" rel="noopener">política de
@@ -91,6 +114,19 @@
     <div id="toast" class="toast" role="status" aria-live="assertive">Mensaje enviado ✅</div>
 
     <script src="app.js"></script>
+
+    <!-- Carga el script de Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+            alert("Por favor completa el reCAPTCHA");
+            e.preventDefault();
+            }
+        });
+    </script>
 
 </body>
 </html>

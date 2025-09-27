@@ -405,6 +405,14 @@ body {
 /*      RESPONSIVE        */
 /* ===================== */
 
+/*ajuste para laptops*/
+@media (max-width: 1340px) {
+    .header{
+        height: 100vh;
+    }
+}
+
+
 /* Tablets */
 @media (max-width: 1024px) {
 
@@ -577,5 +585,63 @@ body {
     .recent-work h2,
     .about-me h2 {
         font-size: 1.4rem;
+    }
+}
+
+/*Banner*/
+
+.compas-banners {
+    padding: variables.$padding-section;
+    background: variables.$bg-dark-blue; // de las variables que te pasé
+    color: variables.$text-white;
+    height: 60vh;
+    max-width: 1200px;
+    margin: auto;
+
+    .compas-head {
+        margin-bottom: 20px;
+
+        h2 { font-size: variables.$font-size-h2; margin: 0 0 6px; }
+        p { color: variables.$text-light-gray; margin: 0; }
+    }
+
+    .banner-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+
+        @media (max-width: variables.$bp-tablet) {
+        grid-template-columns: 1fr;
+        }
+    }
+
+    .banner-card {
+        position: relative;
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: variables.$shadow-strong;
+
+    img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: transform .25s ease;
+    }
+
+    .banner-cta {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+        background: variables.$bg-green-translucent;
+        backdrop-filter: blur(4px);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 600;
+        border: 1px solid rgba(255,255,255,.2);
+    }
+
+    &:hover img { transform: scale(1.03); }
     }
 }
