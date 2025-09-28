@@ -40,10 +40,7 @@
             <p><span class="badge">Seguro</span> Respondo normalmente en 24–48h.</p>
         </header>
 
-        <form id="contactForm" action="procesar.php" novalidate autocomplete="on" aria-describedby="formErrors" method="POST">
-            <!-- Honeypot anti-bots -->
-            <input type="text" name="empresa" id="empresa" tabindex="-1" autocomplete="off"
-                style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+        <form id="contactForm" action="http://127.0.0.1:8000/submit-contact" method="POST" novalidate autocomplete="on" aria-describedby="formErrors">
 
             <div id="formErrors" class="errors" aria-live="polite"></div>
 
@@ -113,7 +110,8 @@
 
     <div id="toast" class="toast" role="status" aria-live="assertive">Mensaje enviado ✅</div>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
+    <script>console.log('[inline] después de app.js');</script>
 
     <!-- Carga el script de Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>

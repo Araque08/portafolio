@@ -202,7 +202,7 @@ body {
 .header {
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   overflow: hidden;
-  height: 80vh;
+  height: 100vh;
 }
 
 .container {
@@ -333,7 +333,7 @@ body {
 }
 /* ===== ABOUT ME ===== */
 .about-me {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background-color: #1e1f26; /* Fondo oscuro */
   color: #fff;
 }
@@ -413,7 +413,7 @@ body {
   background-color: #1e1f26;
   color: #fff;
   text-align: center;
-  height: 60vh;
+  height: 70vh;
 }
 .recent-work h2 {
   font-size: 2rem;
@@ -562,12 +562,6 @@ body {
 /* ===================== */
 /*      RESPONSIVE        */
 /* ===================== */
-/*ajuste para laptops*/
-@media (max-width: 1340px) {
-  .header {
-    height: 100vh;
-  }
-}
 /* Tablets */
 @media (max-width: 1024px) {
   /* HEADER */
@@ -718,6 +712,7 @@ body {
   height: 60vh;
   max-width: 1200px;
   margin: auto;
+  margin-top: 60px;
 }
 .compas-banners .compas-head {
   margin-bottom: 20px;
