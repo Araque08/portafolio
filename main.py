@@ -1,9 +1,16 @@
-# main.py
 from fastapi import FastAPI, Form, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-import httpx
-import os
+from dotenv import load_dotenv
+import httpx, os
+
+load_dotenv()  # carga .env si existe
+
+# === ENV ===
+CONTACT_INBOX_TOKEN  = os.environ.get("CONTACT_INBOX_TOKEN")
+DJANGO_INBOX_URL     = os.environ.get("DJANGO_INBOX_URL", "http://127.0.0.1:9000/contact/inbox/")
+RECAPTCHA_SECRET_KEY = os.environ.get("RECAPTCHA_SECRET_KEY")
+
 
 app = FastAPI(title="Contacto API")
 
@@ -93,9 +100,26 @@ async def submit_contact(
     if not ok:
         raise HTTPException(status_code=400, detail="reCAPTCHA inválido")
 
-    # 4) -> Aquí NO guardamos (lo haremos luego en Django, como pediste)
-    #    Puedes loguear temporalmente si quieres:
-    # print({"name": name, "email": email, "subject": subject})
+    # 5) Enviar a Django para guardar
+    async with httpx.AsyncClient(timeout=10) as client:
+        r = await client.post(
+            DJANGO_INBOX_URL,
+            data={
+                "name": name,
+                "email": email,
+                "phone": phone,
+                "subject": subject,
+                "message": message,
+                "terms": terms,
+            },
+            headers={"X-Contact-Token": CONTACT_INBOX_TOKEN},
+        )
+        # Si Django devuelve error, propágalo
+        if r.status_code >= 400:
+            raise HTTPException(status_code=502, detail=f"Guardar en CMS falló: {r.text}")
+
+    return JSONResponse({"ok": True, "message": "Validación OK y guardado en CMS"}, status_code=200)
+
 
     return JSONResponse(
         {"ok": True, "message": "Validación reCAPTCHA OK. Datos recibidos."},
