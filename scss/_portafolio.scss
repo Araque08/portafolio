@@ -7,6 +7,11 @@ body {
     line-height: 1.6;
 }
 
+a:visited{
+    color: #ffffff;  /* Fuerza blanco */
+    text-decoration: none;
+}
+
 /* Header */
 .header {
     background: linear-gradient(135deg, #1e3a8a, #3b82f6);
@@ -38,12 +43,14 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    color: white;
 }
 
 
 .navbar li {
     cursor: pointer;
     transition: color 0.3s ease;
+    color: white;
 }
 
 .navbar li:hover {
@@ -100,6 +107,7 @@ body {
         display: inline-flex;
         padding: 5px;
         margin: 10px 5px;
+        color: white;
     }
 
     li i{
