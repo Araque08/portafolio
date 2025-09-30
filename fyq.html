@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es" referrerpolicy="no-referrer">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preguntas frecuentes | ProgeSync</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="faq-body">
+  <header class="faq-header">
+    <a href="index.html" class="back-link" aria-label="Volver al inicio">← Volver</a>
+    <h1>Preguntas frecuentes</h1>
+    <p class="subtitle">Resolvemos las dudas más comunes. Si no encuentras la tuya, contáctanos.</p>
+  </header>
+
+  <main class="faq-main" role="main">
+    <!-- Controles -->
+    <section class="faq-controls" aria-label="Controles de preguntas frecuentes">
+      <div class="search-wrap">
+        <label for="faq-search" class="visually-hidden">Buscar preguntas</label>
+        <input id="faq-search" type="search" placeholder="Buscar por palabra clave…" autocomplete="off" />
+      </div>
+      <div class="actions">
+        <button id="btn-toggle-all" class="btn ghost" type="button" aria-expanded="false">
+          Expandir todo
+        </button>
+      </div>
+    </section>
+
+    <!-- Filtros de categorías (se generan dinámicamente si existen) -->
+    <section id="faq-filters" class="faq-filters" aria-label="Filtros de categoría"></section>
+
+    <!-- Lista/Acordeón -->
+    <section id="faq-list" class="faq-list" aria-label="Lista de preguntas frecuentes">
+      <!-- Skeletons iniciales -->
+      <article class="faq-item skeleton">
+        <div class="faq-q"></div>
+        <div class="faq-a"></div>
+      </article>
+      <article class="faq-item skeleton">
+        <div class="faq-q"></div>
+        <div class="faq-a"></div>
+      </article>
+      <article class="faq-item skeleton">
+        <div class="faq-q"></div>
+        <div class="faq-a"></div>
+      </article>
+    </section>
+
+    <!-- Mensajes de estado -->
+    <p id="faq-empty" class="state hidden" role="status">No hay resultados con los filtros/búsqueda actuales.</p>
+    <p id="faq-error" class="state hidden" role="alert">Ocurrió un error al cargar las preguntas. Intenta de nuevo.</p>
+  </main>
+
+  <!-- Config de endpoint y scripts -->
+  <script type="module">
+  window.FAQ_CONFIG = {
+    ENDPOINT: "https://django-i5ss.onrender.com/api/faqs?published=true",
+    PAGE_SIZE: 200
+  };
+</script>
+<script src="/guard.js" defer></script>
+<script type="module" src="js/faq.js" defer></script>
+
+</body>
+</html>
